@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Rick & Morty Characters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+  
+<body>
+    <header class="site-header">
+    <h1>Rick and Morty</h1>
+</header>
+ 
+     <video autoplay muted loop class="video-background">
+  <source src="/assets/rick.mp4" type="video/mp4">
+</video>
+
+    <div class="characters">
+        {{range .}}
+        <a class="card-link" href="{{.URL}}" target="_blank" rel="noopener">
+            <div class="card">
+                <img src="{{.Image}}" alt="{{.Name}}">
+                <h2>{{.Name}}</h2>
+                <p><strong>Espèce :</strong> {{.Species}}</p>
+                <p><strong>Genre :</strong> {{.Gender}}</p>
+                <p><strong>Statut :</strong> {{.Status}}</p>
+                <p><strong>Origine :</strong> {{.Origin.Name}}</p>
+            </div>
+        </a>
+        {{end}}
+    </div>
+</body>
+    <footer class="site-footer">
+        <div class="footer-left">Naoufal, Amine, Sitraka</div>
+        <div class="footer-center">20 Personnages</div>
+        <div class="footer-right">Ynov campusⓒ</div>
+    </footer>
+</html>
